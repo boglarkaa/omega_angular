@@ -1,0 +1,18 @@
+<table *ngIf="users$ | async as vm">
+  <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of vm">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+<table *ngIf="myStuffs$ | async as myStuffs">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let stuff of myStuffs">
+    <tr>
+      <td>{{ stuff.name }}</td>
+      <td>{{ stuff.value }}</td>
+    </tr>
+  </tbody>
+</table>
